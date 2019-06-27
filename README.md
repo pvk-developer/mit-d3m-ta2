@@ -126,14 +126,14 @@ The following leaderboard has been built using the `TA2 Standalone Mode` with `2
 the maximum number of tuning iterations to perform (`budget`) and `30` as the maximum time
 allowed for the tuning (`timeout`):
 
-| dataset                        | template                                    |   cv_score |   test_score |   elapsed_time |   tuning_iterations | data_modality   | task_type      |
-|--------------------------------|---------------------------------------------|------------|--------------|----------------|---------------------|-----------------|----------------|
-| 30_personae                    | gradient_boosting_classification.all_hp.yml | 0.728894   |     0.619048 |        5.93087 |                   2 | single_table    | classification |
-| 57_hypothyroid                 | gradient_boosting_classification.all_hp.yml | 0.862681   |     0.981003 |       38.6418  |                   2 | single_table    | classification |
-| 185_baseball                   | gradient_boosting_classification.all_hp.yml | 0.646959   |     0.675132 |       17.3313  |                   2 | single_table    | classification |
-| 313_spectrometer               | gradient_boosting_classification.all_hp.yml | 0.281409   |     0.304201 |       45.3676  |                   2 | single_table    | classification |
-| 27_wordLevels                  | gradient_boosting_classification.all_hp.yml | 0.268882   |     0.288937 |      169.197   |                   2 | single_table    | classification |
-| 1491_one_hundred_plants_margin | gradient_boosting_classification.all_hp.yml | 0.00957403 |     0.451364 |      114.561   |                   2 | single_table    | classification |
+|dataset                       |template                     |cv_score|test_score|best_score|baseline|exline  |elapsed_time      |tuning_iterations|data_modality|
+|------------------------------|-----------------------------|--------|----------|----------|--------|--------|------------------|-----------------|-------------|
+|30_personae                   |dfs_xgb_classification.hp.yml|0.728894|0.619048  |0.645161  |0.571429|0.619048|00:00:31.773994000|1                |text         |
+|57_hypothyroid                |dfs_xgb_classification.hp.yml|0.865418|0.945903  |0.991213  |0.842661|0.977997|00:00:48.834027000|1                |single_table |
+|185_baseball                  |dfs_xgb_classification.hp.yml|0.680176|0.65722   |0.791903  |0.69137 |0.713804|00:01:11.787577000|1                |single_table |
+|313_spectrometer              |dfs_xgb_classification.hp.yml|0.305112|0.391993  |0.465896  |0.19095 |0.496147|00:54:58.797304000|1                |single_table |
+|27_wordLevels                 |dfs_xgb_classification.hp.yml|0.298217|0.30197   |0.30416   |0.315046|0.31072 |00:01:29.914135000|1                |single_table |
+|1491_one_hundred_plants_margin|dfs_xgb_classification.hp.yml|0.011311|0.73909   |0.915056  |0.693786|0.862722|00:44:44.763537000|1                |single_table |
 
 This table can be also downloaded as a [CSV file](leaderboard.csv)
 
