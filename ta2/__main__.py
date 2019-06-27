@@ -96,6 +96,7 @@ def process_dataset(dataset, args):
     print("Searching Pipeline for dataset {}".format(dataset))
     result = search(dataset_root, problem, args)
     result['elapsed_time'] = datetime.utcnow() - start_ts
+    result['dataset'] = dataset
 
     pipeline_id = result['pipeline']
     cv_score = result['cv_score']
